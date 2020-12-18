@@ -1,0 +1,11 @@
+[Unit]
+Description=Reset NIC
+Before=network-pre.target
+Requires=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/soup/projects/systemd-reset-nic/reset-nic.sh
+
+[Install]
+WantedBy=multi-user.target
